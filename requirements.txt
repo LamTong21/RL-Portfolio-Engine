@@ -1,0 +1,30 @@
+# Core Numerical & Deep Learning Frameworks
+numpy>=1.24.3
+torch>=2.0.1
+scipy>=1.10.1
+
+# Environment & Reinforcement Learning API
+gymnasium>=0.29.1
+
+# Data Analysis & Financial Modeling
+pandas>=2.0.3
+
+# Visualization & Reporting
+matplotlib>=3.7.2
+seaborn>=0.12.2
+
+# Configuration & Utilities
+pyyaml>=6.0.1
+
+# Code Quality, Formatting & Type Checking (Dev)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+isort>=5.12.0
+flake8>=6.1.0
+mypy>=1.5.1
+
+# Interactive Notebook Environment
+jupyterlab>=4.0.5
+ipykernel>=6.25.1
+ipywidgets>=8.1.0

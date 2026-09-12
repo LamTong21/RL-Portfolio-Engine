@@ -1,0 +1,39 @@
+# Environment Configuration
+env:
+  id: "PortfolioEnv-v0"
+  lookback_window: 30
+  transaction_cost_pct: 0.001 # 10 bps per unit turnover
+  risk_free_rate: 0.00005     # Step risk-free cash return
+  risk_aversion: 0.5          # Penalty lambda on portfolio variance
+  initial_balance: 100000.0
+  seed: 1337
+
+# Actor-Critic Architecture (Continuous Action Space)
+model:
+  hidden_dim: 128
+  activation: "tanh"
+  init_log_std: 0.0           # Initial exploration variance parameter
+
+# PPO Optimization Parameters
+hyperparameters:
+  learning_rate: 0.0003
+  gamma: 0.99                 # Reward discount factor
+  gae_lambda: 0.95            # Generalized Advantage Estimation smoothing
+  clip_ratio: 0.2             # PPO surrogate clipping epsilon
+  k_epochs: 10                # Optimization epochs per rollout batch
+  batch_size: 64              # Mini-batch size for SGD updates
+  value_coef: 0.5             # Critic loss weighting in composite objective
+  entropy_coef: 0.01          # Entropy bonus coefficient for exploration
+  max_grad_norm: 0.5          # Gradient clipping threshold
+
+# Rollout & Training Protocol
+training:
+  total_timesteps: 500000
+  rollout_steps: 2048         # Trajectory horizon collected before update
+  eval_frequency: 10000       # Evaluation steps interval
+
+# Backtest & Logging
+evaluation:
+  benchmark: "1_over_n"       # Comparison against Equal-Weight portfolio
+  save_dir: "models/checkpoints/ppo_portfolio"
+  metrics_save_path: "docs/images/portfolio_equity_curve.png"
