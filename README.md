@@ -1,11 +1,9 @@
 # Reinforcement Learning: Foundations, Implementations & Financial Applications
 
-```
-![Python 3.10+](https://www.python.org/downloads/)
-![PyTorch](https://pytorch.org/)
-![Gymnasium](https://gymnasium.farama.org/)
-![License: MIT](https://opensource.org/licenses/MIT) 
-```
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
+[![Gymnasium](https://img.shields.io/badge/Gymnasium-v0.29+-green.svg)](https://gymnasium.farama.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A research-oriented repository demonstrating core Reinforcement Learning (RL) concepts, ranging from classical tabular methods implemented from scratch in NumPy to modern Deep RL architectures (DQN, PPO) implemented in PyTorch. The repository culminates in a custom financial environment modeling continuous dynamic portfolio allocation under real-world market frictions.
 
